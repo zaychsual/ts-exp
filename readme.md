@@ -1,5 +1,5 @@
 ## About Project
-Ini merupakan project menggunakan typescript dan express JS saya sengaja menuimpan di git sebagai pembelajaran bagi saya agar bisa mengulang kembali
+Ini merupakan project menggunakan typescript dan express JS saya sengaja menyimpan di git sebagai pembelajaran bagi saya agar bisa mengulang kembali
 
 ## Tahapan pengerjaan
 1. buka terminal jalankan
