@@ -22,5 +22,12 @@ Ini merupakan project menggunakan typescript dan express JS saya sengaja menuimp
     ```sh
     ./node_modules/.bin/tsc --init ko
     ```
-    perintah diatas akan membuat file tsconfig.json
-4.  
+    perintah diatas akan membuat file tsconfig.json pada root
+5.  instal express
+    ```sh
+    yarn add express
+    ```
+6. install types
+    ```sh
+    yarn add @types/express -D
+    ```
