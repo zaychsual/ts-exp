@@ -1,5 +1,5 @@
 import express, { Application, Request, Response } from "express";
-// import dotEnv from 'doten v';
+import { config as dontenv } from 'dotenv';
 import bodyParser from "body-parser";
 import morgan from "morgan";
 import compression from "compression";
@@ -17,6 +17,7 @@ class App
         this.app = express();
         this.plugins();
         this.routes();
+        dontenv();
     }
 
     protected plugins(): void 
@@ -38,8 +39,8 @@ class App
     }
 }
 
-const port: number = 1602;
 const app = new App().app;
-app.listen(port, () => {
-    console.log("Aplikasi berjalan di port "+ port)
+app.listen(process.env.NODE_PORT, () => {
+    console.log("Aplikasi berjalan di port "+ process.env.NODE_PORT)
+    console.log(process.env.NODE_PORT)
 });

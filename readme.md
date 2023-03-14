@@ -39,7 +39,7 @@ Ini merupakan project menggunakan typescript dan express JS saya sengaja menyimp
     ```
 3. dotenv
     ```sh
-    yarn add dotenv -D
+    yarn add dotenv
     ```
 4. bodyparser untuk mengambil data yg dikirim via postman
     ```sh

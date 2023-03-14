@@ -1,1 +1,8 @@
-BACK_HOST=1614
+NODE_ENV=development
+
+NODE_PORT=1602
+
+DB_HOST=localhost
+DB_PORT=3306
+DB_USER=root
+DB_PASSWORD=
