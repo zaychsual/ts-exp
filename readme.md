@@ -26,22 +26,24 @@ Ini merupakan project menggunakan typescript dan express JS saya sengaja menyimp
     ./node_modules/.bin/tsc --init ko
     ```
     perintah diatas akan membuat file tsconfig.json pada root
-5.  instal express
+
+## Installation Package
+1.  instal express
     ```sh
     yarn add express
     ```
-6. install types
+2. install types
     ```sh
     yarn add @types/express -D
     ```
-7. install dotenv
+3. install dotenv
     ```sh
     yarn add dotenv -D
     ```
-8. install bodyparser untuk mengambil data yg dikirim via postman
+4. install bodyparser untuk mengambil data yg dikirim via postman
     ```sh
     yarn add body-parser -D    ```
-9. install bodyparser untuk mengambil data yg dikirim via postman
+5. install bodyparser untuk mengambil data yg dikirim via postman
     ```sh
     yarn add morgan @types-morgan -D
     ```
