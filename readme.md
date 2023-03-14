@@ -59,7 +59,8 @@ Ini merupakan project menggunakan typescript dan express JS saya sengaja menyimp
     ```
 
 ## Middleware JS
-konsep disini seperti satpam saat akan mengakses request file yang berkaitan ada di ```sh middlewares/AuthMiddleware ```
+konsep disini seperti satpam saat akan mengakses request file yang berkaitan ada di ``` middlewares/AuthMiddleware ```
+
 ```sh
 import { Request, Response, NextFunction } from "express";
 
@@ -74,7 +75,7 @@ export const auth = (req: Request, res: Response, next: NextFunction): any =>
     return res.send("unauthenticated");
 }
 ```
-kegunaan ```sh next() ``` pada codingan diatas berfungsi sebagai filter ketika auth sesuai maka program akan menjalankan perintah selanjutnya, contoh penggunaannya ada di bawah ini
+kegunaan ``` next() ``` pada codingan diatas berfungsi sebagai filter ketika auth sesuai maka program akan menjalankan perintah selanjutnya, contoh penggunaannya ada di bawah ini
 
 ```sh
 import { auth } from "../middlewares/AuthMiddleware";
@@ -87,4 +88,4 @@ class UserRoutes extends BaseRoute
     {
         this.router.get("/", auth,  UserController.index);
 ```
-jika ada auth berhasil maka, perintah yang di lanjutkan ada ke ```sh UserController.index ```
+jika ada auth berhasil maka, perintah yang di lanjutkan ada ke ``` UserController.index ```
