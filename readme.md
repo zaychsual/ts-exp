@@ -40,5 +40,8 @@ Ini merupakan project menggunakan typescript dan express JS saya sengaja menyimp
     ```
 8. install bodyparser untuk mengambil data yg dikirim via postman
     ```sh
-    yarn add body-parser -D
+    yarn add body-parser -D    ```
+9. install bodyparser untuk mengambil data yg dikirim via postman
+    ```sh
+    yarn add morgan @types-morgan -D
     ```
