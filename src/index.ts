@@ -5,6 +5,8 @@ import morgan from "morgan";
 import compression from "compression";
 import helmet from "helmet";
 import cors from "cors";
+//Routers
+import UserRoutes from "./routers/UserRoutes";
 
 class App {
     public app: Application;
@@ -28,9 +30,7 @@ class App {
             res.send("ini adalah route menggunakan TS");
         });
 
-        this.app.route("/users").post((req: Request, res: Response) => {
-            res.send(req.body);
-        })
+        this.app.use("/users", UserRoutes);
     }
 }
 

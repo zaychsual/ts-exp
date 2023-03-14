@@ -1,8 +1,9 @@
-# USER ROUTE
+# root
 GET http://localhost:1602/
 
 ###
-GET http://localhost:1602/users/1
+# root
+GET http://localhost:1602/users
 
 ###
 POST http://localhost:1602/users
