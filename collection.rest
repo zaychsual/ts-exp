@@ -2,31 +2,34 @@
 GET http://localhost:1602/
 
 ###
-# root
-GET http://localhost:1602/users
+# index
+GET http://localhost:1602/api/v1/users
 
 ###
-POST http://localhost:1602/users
+# create
+POST http://localhost:1602/api/v1/users
 Content-Type: application/json
 
 {
-    "name": "Syifa Karim",
-    "email": "syifa@email.com",
-    "gender": "Female"
+    "id": 14,
+    "name": "jancuk 14"
 }
 
 ###
-PATCH http://localhost:1602/users/1
+# show
+GET http://localhost:1602/api/v1/users/14
+
+###
+PUT http://localhost:1602/api/v1/users/1
 Content-Type: application/json
 
 {
-    "name": "Aziz Zaind",
-    "email": "admin@email.com",
-    "gender": "Male"
+    "id": 1,
+    "name": "paijo"
 }
 
 ###
-DELETE http://localhost:1602/users/2
+DELETE http://localhost:1602/api/v1/users/1
 
 
 # PRODUCT ROUTE
