@@ -61,23 +61,25 @@ Ini merupakan project menggunakan typescript dan express JS saya sengaja menyimp
     ```sh
     yarn add sequelize sequelize-cli
     ```
-    setelah selesai instalasi buat file .sequelizerc di root, lalu jalankan perintah
+    
+## ORM Sequelize
+1. setelah selesai instalasi buat file .sequelizerc di root, lalu jalankan perintah
     ```sh
     ./node_modules/.bin/sequelize-cli init
     ```
-    perintah diatas akan membuat folder dan file bawaan sequelize,penempatan folder tersebut mengikuti settingan pada file .sequelizerc. 
-    perintah membuat migrasi 
+    perintah diatas akan membuat folder dan file bawaan sequelize,penempatan folder tersebut mengikuti settingan pada file .sequelizerc
+2. perintah membuat migrasi 
     ```sh
     ./node_modules/.bin/sequelize-cli model:generate --name user --attributes username:string,password:string --underscored
     ```
     - name => nama table
     - attributes => column di dalam table
     - underscored => pembuatan nama table berbentuk snakecase,sehingga lebih mudah dibaca karena bawaanya menggunakan CamelCase
-    perintah melakukan migration
+    perintah diatas akan membuat file pada folder migrations, dan model sesuai nama
+3. perintah melakukan migration
     ```sh
     ./node_modules/.bin/sequelize-cli db:migrate
     ```
-
 
 ## Middleware JS
 konsep disini seperti satpam saat akan mengakses request file yang berkaitan ada di ``` middlewares/AuthMiddleware ```
