@@ -21,7 +21,7 @@ Ini merupakan project menggunakan typescript dan express JS saya sengaja menyimp
     - tsc berguna untuk compile ts ke js
     - ts berguna compile ts ke js format word lebih bersifat live,dia akan membaca file apa saja yg berubah
     - dev berguna running js yg sudah di compile
-    
+
 4. konfigurasi tsc, jalankan perintah pada terminal
     ```sh
     ./node_modules/.bin/tsc --init ko
@@ -57,3 +57,34 @@ Ini merupakan project menggunakan typescript dan express JS saya sengaja menyimp
     ```sh
     yarn add @types/compression @types/helmet @types/cors -D
     ```
+
+## Middleware JS
+konsep disini seperti satpam saat akan mengakses request file yang berkaitan ada di ```sh middlewares/AuthMiddleware ```
+```sh
+import { Request, Response, NextFunction } from "express";
+
+export const auth = (req: Request, res: Response, next: NextFunction): any => 
+{
+    let auth = false;
+    
+    if(auth) {
+        // ini merupakan perintah selanjutnya misalkan lolos maka akkan menjalankan function selanjutnya
+        next();
+    }
+    return res.send("unauthenticated");
+}
+```
+kegunaan ```sh next() ``` pada codingan diatas berfungsi sebagai filter ketika auth sesuai maka program akan menjalankan perintah selanjutnya, contoh penggunaannya ada di bawah ini
+
+```sh
+import { auth } from "../middlewares/AuthMiddleware";
+// controllers
+import UserController from "../controllers/UserController";
+
+class UserRoutes extends BaseRoute 
+{
+    public routes(): void 
+    {
+        this.router.get("/", auth,  UserController.index);
+```
+jika ada auth berhasil maka, perintah yang di lanjutkan ada ke ```sh UserController.index ```

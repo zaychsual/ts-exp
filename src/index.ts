@@ -8,16 +8,19 @@ import cors from "cors";
 //Routers
 import UserRoutes from "./routers/UserRoutes";
 
-class App {
+class App 
+{
     public app: Application;
 
-    constructor() {
+    constructor() 
+    {
         this.app = express();
         this.plugins();
         this.routes();
     }
 
-    protected plugins(): void {
+    protected plugins(): void 
+    {
         this.app.use(bodyParser.json());
         this.app.use(morgan("dev"));
         this.app.use(compression());
@@ -25,7 +28,8 @@ class App {
         this.app.use(cors());
     }
 
-    protected routes(): void {
+    protected routes(): void 
+    {
         this.app.route("/").get((req: Request, res: Response) => {
             res.send("ini adalah route menggunakan TS");
         });

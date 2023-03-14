@@ -14,12 +14,15 @@ let data: any[] = [
     { id: 10, name: "Adi 10" }
 ];
 
-class UserController implements IController {
-    index(req: Request, res: Response): Response {
+class UserController implements IController 
+{
+    index(req: Request, res: Response): Response 
+    {
         return res.send(data);
     }
 
-    create(req: Request, res: Response): Response {
+    create(req: Request, res: Response): Response 
+    {
         const { id, name } = req.body;
 
         data.push({
@@ -30,7 +33,8 @@ class UserController implements IController {
         return res.send("data created");
     }
 
-    show(req: Request, res: Response): Response {
+    show(req: Request, res: Response): Response 
+    {
         const { id } = req.params;
 
         let user = data.find(
@@ -40,7 +44,8 @@ class UserController implements IController {
         return res.send(user);
     }
 
-    update(req: Request, res: Response): Response {
+    update(req: Request, res: Response): Response 
+    {
         const { id } = req.params;
         const { name } = req.body;
         let user = data.find(
@@ -50,7 +55,8 @@ class UserController implements IController {
         return res.send("data updated");
     }
 
-    delete(req: Request, res: Response): Response {
+    delete(req: Request, res: Response): Response 
+    {
         const { id } = req.params;
         let user = data.filter(item => item.id != id);
 
