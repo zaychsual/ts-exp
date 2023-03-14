@@ -18,6 +18,9 @@ Ini merupakan project menggunakan typescript dan express JS saya sengaja menyimp
         "dev": "nodemon ./build/index.js"
     },
     ```
+    - tsc berguna untuk compile ts ke js
+    - ts berguna compile ts ke js format word lebih bersifat live,dia akan membaca file apa saja yg berubah
+    - dev berguna running js yg sudah di compile
 4. konfigurasi tsc, jalankan perintah pada terminal
     ```sh
     ./node_modules/.bin/tsc --init ko
@@ -30,4 +33,12 @@ Ini merupakan project menggunakan typescript dan express JS saya sengaja menyimp
 6. install types
     ```sh
     yarn add @types/express -D
+    ```
+7. install dotenv
+    ```sh
+    yarn add dotenv -D
+    ```
+8. install bodyparser untuk mengambil data yg dikirim via postman
+    ```sh
+    yarn add body-parser -D
     ```

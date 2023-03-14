@@ -1,0 +1,59 @@
+# USER ROUTE
+GET http://localhost:1602/
+
+###
+GET http://localhost:1602/users/1
+
+###
+POST http://localhost:1602/users
+Content-Type: application/json
+
+{
+    "name": "Syifa Karim",
+    "email": "syifa@email.com",
+    "gender": "Female"
+}
+
+###
+PATCH http://localhost:1602/users/1
+Content-Type: application/json
+
+{
+    "name": "Aziz Zaind",
+    "email": "admin@email.com",
+    "gender": "Male"
+}
+
+###
+DELETE http://localhost:1602/users/2
+
+
+# PRODUCT ROUTE
+###
+GET http://localhost:1602/product
+
+###
+GET http://localhost:1602/product/1
+
+###
+POST http://localhost:1602/product
+Content-Type: application/json
+
+{
+    "name": "Syifa Karim",
+    "email": "syifa@email.com",
+    "gender": "Female"
+}
+
+###
+PATCH http://localhost:1602/product/1
+Content-Type: application/json
+
+{
+    "name": "Aziz Zaind",
+    "email": "admin@email.com",
+    "gender": "Male"
+}
+
+###
+DELETE http://localhost:1602/product/2
