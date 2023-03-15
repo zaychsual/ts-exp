@@ -7,6 +7,7 @@ import helmet from "helmet";
 import cors from "cors";
 //Routers
 import UserRoutes from "./routers/UserRoutes";
+import AuthRoutes from "./routers/AuthRoutes";
 
 class App 
 {
@@ -36,6 +37,7 @@ class App
         });
 
         this.app.use("/api/v1/users", UserRoutes);
+        this.app.use("/api/v1/auth", AuthRoutes);
     }
 }
 

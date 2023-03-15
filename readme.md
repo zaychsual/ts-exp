@@ -61,7 +61,28 @@ Ini merupakan project menggunakan typescript dan express JS saya sengaja menyimp
     ```sh
     yarn add sequelize sequelize-cli
     ```
-    
+9. add hash password
+    ```sh
+    yarn add bcrypt
+    ```
+    add type
+    ```sh
+    yarn add @types/bcrypt
+    ```
+10. add validator
+    ```sh
+    yarn add express-validator
+    ```
+11. add jwt
+    ```sh
+    yarn add jsonwebtoken
+    ```
+    add type
+    ```sh
+    yarn add @types/jsonwebtoken
+    ```
+
+
 ## ORM Sequelize
 1. setelah selesai instalasi buat file .sequelizerc di root, lalu jalankan perintah
     ```sh
@@ -81,7 +102,7 @@ Ini merupakan project menggunakan typescript dan express JS saya sengaja menyimp
     ./node_modules/.bin/sequelize-cli db:migrate
     ```
 
-## Middleware JS
+## Middleware
 konsep disini seperti satpam saat akan mengakses request file yang berkaitan ada di ``` middlewares/AuthMiddleware ```
 
 ```sh

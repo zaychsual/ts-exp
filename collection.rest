@@ -31,33 +31,23 @@ Content-Type: application/json
 ###
 DELETE http://localhost:1602/api/v1/users/1
 
-
-# PRODUCT ROUTE
 ###
-GET http://localhost:1602/product
-
-###
-GET http://localhost:1602/product/1
-
-###
-POST http://localhost:1602/product
+# register
+POST http://localhost:1602/api/v1/auth/register
 Content-Type: application/json
 
 {
-    "name": "Syifa Karim",
-    "email": "syifa@email.com",
-    "gender": "Female"
+    "username": "syifakarima",
+    "password": "password"
 }
 
 ###
-PATCH http://localhost:1602/product/1
+# login
+POST http://localhost:1602/api/v1/auth/login
 Content-Type: application/json
 
 {
-    "name": "Aziz Zaind",
-    "email": "admin@email.com",
-    "gender": "Male"
+    "username": "syifakarima",
+    "password": "password"
+    
 }
-
-###
-DELETE http://localhost:1602/product/2

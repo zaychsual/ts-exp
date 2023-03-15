@@ -1,17 +1,38 @@
 import { Request, Response } from "express";
+import Authentication from "../utils/Authentication";
+const db = require("../db/models");
 
 class AuthController 
 {
-    index(req: Request, res: Response): Response 
+    register = async (req: Request, res: Response): Promise<Response> =>
     {
-        return res.send("");
+        let { username, password } = req.body;
+        const hashedPassword: string = await Authentication.hash(password);
+
+        await db.user.create({ username, password: hashedPassword });
+
+        return res.send("User Registered");
     }
 
-    create(req: Request, res: Response): Response 
+    login = async(req: Request, res: Response): Promise<Response> =>
     {
-        const { id, name } = req.body;
-
-        return res.send("");
+        //cari data user
+        let { username, password } = req.body;
+        const user = await db.user.findOne({
+            where: { username }
+        });
+        //check password
+        if(user) {
+            let compare = await Authentication.checkPass(password, user.password);
+            if(compare) {
+                let token = Authentication.generateToken(user.id, username, user.password);
+                return res.send({
+                    token
+                });
+            }
+        }
+        return res.send("koe ga terdaftar");
+        //generate token
     }
     
 }
