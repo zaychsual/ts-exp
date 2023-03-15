@@ -8,6 +8,7 @@ import cors from "cors";
 //Routers
 import UserRoutes from "./routers/UserRoutes";
 import AuthRoutes from "./routers/AuthRoutes";
+import ToDoRoutes from "./routers/ToDoRoutes";
 
 class App 
 {
@@ -38,6 +39,7 @@ class App
 
         this.app.use("/api/v1/users", UserRoutes);
         this.app.use("/api/v1/auth", AuthRoutes);
+        this.app.use("/api/v1/todos", ToDoRoutes);
     }
 }
 

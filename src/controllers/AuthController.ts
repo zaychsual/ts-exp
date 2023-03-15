@@ -35,8 +35,7 @@ class AuthController
         //generate token
     }
 
-    profile = (req: Request, res: Response): Response =>
-    {
+    profile = (req: Request, res: Response): Response => {
         return res.send(req.app.locals.credential);
     }
     

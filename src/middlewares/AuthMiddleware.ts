@@ -1,8 +1,7 @@
 import { Request, Response, NextFunction } from "express";
 import jwt from "jsonwebtoken";
 
-export const auth = (req: Request, res: Response, next: NextFunction): any => 
-{
+export const auth = (req: Request, res: Response, next: NextFunction): any => {
     if(!req.headers.authorization) {
         return res.status(401).send("tokenmu nengdi lek");
     }
@@ -14,7 +13,7 @@ export const auth = (req: Request, res: Response, next: NextFunction): any =>
 
         if(credential) {
             req.app.locals.credential = credential
-            next();
+            return next();
         }
 
         return res.send("token invalid");

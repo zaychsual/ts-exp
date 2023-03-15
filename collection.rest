@@ -53,7 +53,39 @@ Content-Type: application/json
 }
 
 ###
-# login
+# profile
 GET http://localhost:1602/api/v1/auth/profile
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJzeWlmYWthcmltYSIsInBhc3N3b3JkIjoiJDJiJDEwJGJXNDhkZzRySVZUUmtTRzQzUzZDL2UxTkNiRmtaejBoNHo2R2tHWUpaSi9iMUN2MEF0ZWc2IiwiaWF0IjoxNjc4ODU2Njk1fQ.Aie0jYAsd63HUs3vhgNG5HklwFfAAlUtUgJpyGNjx8s
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJzeWlmYWthcmltYSIsInBhc3N3b3JkIjoiJDJiJDEwJGJXNDhkZzRySVZUUmtTRzQzUzZDL2UxTkNiRmtaejBoNHo2R2tHWUpaSi9iMUN2MEF0ZWc2IiwiaWF0IjoxNjc4ODgxMDM5fQ.LltkNw9JXxj6CTQFpiIPF0Jc9g45RrSRCVO44HkjitU
 Content-Type: application/json
+
+###
+# index
+GET http://localhost:1602/api/v1/todos
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJzeWlmYWthcmltYSIsInBhc3N3b3JkIjoiJDJiJDEwJGJXNDhkZzRySVZUUmtTRzQzUzZDL2UxTkNiRmtaejBoNHo2R2tHWUpaSi9iMUN2MEF0ZWc2IiwiaWF0IjoxNjc4ODk0MjMzfQ.l8P-Gj_j9Acgm44x-DaSye2R648nA7WzgffuEzI_vBo
+###
+# create
+POST http://localhost:1602/api/v1/todos
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJzeWlmYWthcmltYSIsInBhc3N3b3JkIjoiJDJiJDEwJGJXNDhkZzRySVZUUmtTRzQzUzZDL2UxTkNiRmtaejBoNHo2R2tHWUpaSi9iMUN2MEF0ZWc2IiwiaWF0IjoxNjc4ODk0MjMzfQ.l8P-Gj_j9Acgm44x-DaSye2R648nA7WzgffuEzI_vBo
+Content-Type: application/json
+
+{
+    "desc": "Jalan Jalan Yuk"
+}
+
+###
+# show
+GET http://localhost:1602/api/v1/todos/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJzeWlmYWthcmltYSIsInBhc3N3b3JkIjoiJDJiJDEwJGJXNDhkZzRySVZUUmtTRzQzUzZDL2UxTkNiRmtaejBoNHo2R2tHWUpaSi9iMUN2MEF0ZWc2IiwiaWF0IjoxNjc4ODk0MjMzfQ.l8P-Gj_j9Acgm44x-DaSye2R648nA7WzgffuEzI_vBo
+
+###
+PUT http://localhost:1602/api/v1/todos/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJzeWlmYWthcmltYSIsInBhc3N3b3JkIjoiJDJiJDEwJGJXNDhkZzRySVZUUmtTRzQzUzZDL2UxTkNiRmtaejBoNHo2R2tHWUpaSi9iMUN2MEF0ZWc2IiwiaWF0IjoxNjc4ODk0MjMzfQ.l8P-Gj_j9Acgm44x-DaSye2R648nA7WzgffuEzI_vBo
+Content-Type: application/json
+
+{
+    "desc": "jono"
+}
+
+###
+DELETE http://localhost:1602/api/v1/todos/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJzeWlmYWthcmltYSIsInBhc3N3b3JkIjoiJDJiJDEwJGJXNDhkZzRySVZUUmtTRzQzUzZDL2UxTkNiRmtaejBoNHo2R2tHWUpaSi9iMUN2MEF0ZWc2IiwiaWF0IjoxNjc4ODgxMDM5fQ.LltkNw9JXxj6CTQFpiIPF0Jc9g45RrSRCVO44HkjitU
