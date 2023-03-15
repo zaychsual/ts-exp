@@ -53,27 +53,27 @@ Ini merupakan project menggunakan typescript dan express JS saya sengaja menyimp
     ```sh
     yarn add compression helmet cors
     ```
-7. add type compression untuk kompressor setiap request, helmet, dan cors
+    add type
     ```sh
     yarn add @types/compression @types/helmet @types/cors -D
     ```
-8. add ORM 
+7. add ORM 
     ```sh
     yarn add sequelize sequelize-cli
     ```
-9. add hash password
+8. add hash password
     ```sh
     yarn add bcrypt
     ```
     add type
     ```sh
-    yarn add @types/bcrypt
+    yarn add @types/bcrypt -D
     ```
-10. add validator
+9. add validator
     ```sh
     yarn add express-validator
     ```
-11. add jwt
+10. add jwt
     ```sh
     yarn add jsonwebtoken
     ```
