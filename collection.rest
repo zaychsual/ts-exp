@@ -55,13 +55,13 @@ Content-Type: application/json
 ###
 # profile
 GET http://localhost:1602/api/v1/auth/profile
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJzeWlmYWthcmltYSIsInBhc3N3b3JkIjoiJDJiJDEwJGJXNDhkZzRySVZUUmtTRzQzUzZDL2UxTkNiRmtaejBoNHo2R2tHWUpaSi9iMUN2MEF0ZWc2IiwiaWF0IjoxNjc4ODgxMDM5fQ.LltkNw9JXxj6CTQFpiIPF0Jc9g45RrSRCVO44HkjitU
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJzeWlmYWthcmltYSIsInBhc3N3b3JkIjoiJDJiJDEwJGJXNDhkZzRySVZUUmtTRzQzUzZDL2UxTkNiRmtaejBoNHo2R2tHWUpaSi9iMUN2MEF0ZWc2IiwiaWF0IjoxNjc4OTI4MjE3fQ.eVixi9IzzC2fi21ITe2MdKJEehbzQmm5ltDFZZdghB4
 Content-Type: application/json
 
 ###
 # index
 GET http://localhost:1602/api/v1/todos
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJzeWlmYWthcmltYSIsInBhc3N3b3JkIjoiJDJiJDEwJGJXNDhkZzRySVZUUmtTRzQzUzZDL2UxTkNiRmtaejBoNHo2R2tHWUpaSi9iMUN2MEF0ZWc2IiwiaWF0IjoxNjc4ODk0MjMzfQ.l8P-Gj_j9Acgm44x-DaSye2R648nA7WzgffuEzI_vBo
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJzeWlmYWthcmltYSIsInBhc3N3b3JkIjoiJDJiJDEwJGJXNDhkZzRySVZUUmtTRzQzUzZDL2UxTkNiRmtaejBoNHo2R2tHWUpaSi9iMUN2MEF0ZWc2IiwiaWF0IjoxNjc4OTI4MjE3fQ.eVixi9IzzC2fi21ITe2MdKJEehbzQmm5ltDFZZdghB4
 ###
 # create
 POST http://localhost:1602/api/v1/todos
@@ -69,12 +69,12 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hb
 Content-Type: application/json
 
 {
-    "desc": "Jalan Jalan Yuk"
+    "desc": "Jalan Jalan Lagi"
 }
 
 ###
 # show
-GET http://localhost:1602/api/v1/todos/1
+GET http://localhost:1602/api/v1/todos/2 
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJzeWlmYWthcmltYSIsInBhc3N3b3JkIjoiJDJiJDEwJGJXNDhkZzRySVZUUmtTRzQzUzZDL2UxTkNiRmtaejBoNHo2R2tHWUpaSi9iMUN2MEF0ZWc2IiwiaWF0IjoxNjc4ODk0MjMzfQ.l8P-Gj_j9Acgm44x-DaSye2R648nA7WzgffuEzI_vBo
 
 ###

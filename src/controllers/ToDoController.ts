@@ -1,18 +1,13 @@
 import { Request, Response } from "express";
 import IController from "./ControllerInterface";
-const db = require("../db/models");
+import ToDoService from "../service/ToDoService";
 
 class ToDoController implements IController 
 {
     index = async (req: Request, res: Response): Promise<Response> =>
     {
-        const { id } = req.app.locals.credential;
-        const todos = await db.todo.findAll({
-            where: {
-                user_id: id
-            },
-            attributes: ['id', 'desc']
-        });
+        const service: ToDoService = new ToDoService(req);
+        const todos = await service.getAll();
 
         return res.send({
             message: "List",
@@ -22,13 +17,8 @@ class ToDoController implements IController
 
     create = async (req: Request, res: Response): Promise<Response> =>
     {
-        const { id } = req.app.locals.credential;
-        const { desc } = req.body;
-        
-        const todo = await db.todo.create({
-            user_id: id,
-            desc
-        });
+        const service: ToDoService = new ToDoService(req);
+        const todo = await service.store();
 
         return res.send({
             msg: "Data Saved",
@@ -38,56 +28,34 @@ class ToDoController implements IController
 
     show = async (req: Request, res: Response): Promise<Response> =>
     {
-        const { id: user_id } = req.app.locals.credential;
-        const { id } = req.params;
-        const todos = await db.todo.findOne({
-            where: {
-                id: id,
-                user_id: user_id
-            },
-            attributes: ['id', 'desc']
-        });
+        const service: ToDoService = new ToDoService(req);
+        const todo = await service.getOne();
 
         return res.send({
             message: "Show",
-            data: todos
+            data: todo
         });
     }
 
     update = async (req: Request, res: Response): Promise<Response> =>
     {
-        const { id: user_id } = req.app.locals.credential;
-        const { id } = req.params;
-        const { desc } = req.body;
-        
-        const todos = await db.todo.update({
-            desc
-        },{
-            where: {
-                id: id,
-                user_id: user_id
-            }
-        });
+        const service: ToDoService = new ToDoService(req);
+        const todo = await service.patch();
 
         return res.send({
             message: "Show",
-            data: todos
+            data: todo
         });
     }
 
     delete = async (req: Request, res: Response): Promise<Response> =>
     {
-        const { id: user_id } = req.app.locals.credential;
-        const { id } = req.params;
-        await db.todo.destroy({
-            where: {
-                id: id,
-                user_id: user_id
-            }
-        });
+        const service: ToDoService = new ToDoService(req);
+        const todo = await service.delete();
         
         return res.send({
             message: "Todo Deleted",
+            data: todo
         });
     }
     
